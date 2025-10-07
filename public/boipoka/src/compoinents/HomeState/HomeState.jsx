@@ -2,8 +2,11 @@ import React from 'react';
 
 const HomeState = () => {
     return (
-        <div>
-            <div className="stats shadow">
+        <div className='w-full bg-gradient-to-[125deg] from-[#632EE3] to-[#9F62F2] mx-auto'>
+            <div className='mx-auto text-center md:text-3xl text-xl mt-15 text-bold'>
+                <h2>Trusted by Millions, Built for You</h2>
+            </div>
+            <div className="stats">
                 <div className="stat place-items-center">
                     <div className="stat-title">Downloads</div>
                     <div className="stat-value">31K</div>
@@ -12,8 +15,8 @@ const HomeState = () => {
 
                 <div className="stat place-items-center">
                     <div className="stat-title">Users</div>
-                    <div className="stat-value text-secondary">4,200</div>
-                    <div className="stat-desc text-secondary">↗︎ 40 (2%)</div>
+                    <div className="stat-value ">4,200</div>
+                    <div className="stat-desc ">↗︎ 40 (2%)</div>
                 </div>
 
                 <div className="stat place-items-center">

@@ -4,7 +4,7 @@ import SingleApp from '../SingleApp/SingleApp';
 const TrendingApps = ({appsData}) => {
     
     return (
-        <div className='flex flex-col '>
+        <div className='flex flex-col bg-gray-100'>
             <div className='flex justify-center items-center flex-col mb-15 mt-15'>
                 <h2 className='lg:text-5xl md:text-3xl text-2xl font-bold'>Trending Apps</h2>
                 <p className='text-xl mt-3 text-gray-600'>Explore All Trending Apps on the Market developed by us</p>
