@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom'; 
 import downloadIcon from '../../assets/icon-downloads.png'
 import reviewIcon from '../../assets/icon-review.png'
@@ -6,11 +6,17 @@ import ratingIcon from '../../assets/icon-ratings.png'
 import RatingCharts from '../../components/RatingCharts/RatingCharts';
 
 const AppDetails = () => {
-  const { id } = useParams();
+  const { ids } = useParams();
   const appDetails = useLoaderData();
-  const findAppId = appDetails.find(app => app.id === parseInt(id));
-  const {title, image, description, companyName, downloads, ratingAvg, reviews, size, ratings} = findAppId;
-  console.log(ratings)
+  const findAppId = appDetails.find(app => app.id === parseInt(ids));
+  const [appInstalled, setAppInstalled] = useState(false);
+  const {title, image, description, id, companyName, downloads, ratingAvg, reviews, size, ratings} = findAppId;
+  //console.log(ratings)
+
+
+  const handInstalledBtn = (id) => {
+
+  }
 
   return (
     <div className="max-w-[1600px] mx-auto md:p-15 p-5 bg-gray-200">
@@ -60,7 +66,7 @@ const AppDetails = () => {
                     </div>
                 </div>
 
-                <button className='btn bg-[#00d390] text-white font-medium mt-5'>Install Now ({size} MB)</button>
+                <button onClick={() => handInstalledBtn(id)} className='btn bg-[#00d390] text-white font-medium mt-5'>Install Now ({size} MB)</button>
                     
             </div>
             
