@@ -2,14 +2,20 @@ import React from 'react';
 import { Link, Links } from 'react-router';
 import { FaGithub } from "react-icons/fa";
 import logo from '../../assets/logo.png';
+import { NavLink } from "react-router";
+import './Header.css'
 
 const Header = () => {
 
     const links = <>
 
-        <Link to={'/'}><li className='m-2'>Home</li></Link>
+        {/* <Link to={'/'}><li className='m-2'>Home</li></Link>
         <Link to={'/apps'}><li className='m-2'>Apps</li></Link>
-        <Link to={'/installation'}><li className='m-2'>Installation</li></Link>
+        <Link to={'/installation'}><li className='m-2'>Installation</li></Link> */}
+
+            <NavLink to={'/'} className={`m-2`}>Home</NavLink>
+            <NavLink to={'/apps'} className={`m-2`}>Apps</NavLink>
+            <NavLink to={'/installation'} className={`m-2`}>Installation</NavLink>
     
     </>
 
@@ -27,8 +33,8 @@ const Header = () => {
                         {links}
                     </ul>
                     </div>
-                    <Link to={'/'}>
-                        <a className="flex justify-center items-center gap-2 text-bold text-base text-violet-600"><img className='max-w-[40px]' src={logo} alt='logo' />Hero.io</a>
+                    <Link to={'/'} className="flex justify-center items-center gap-2 text-bold text-base text-violet-600">
+                        <img className='max-w-[40px]' src={logo} alt='logo' />Hero.io
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">

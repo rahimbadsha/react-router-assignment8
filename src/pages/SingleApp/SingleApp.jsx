@@ -8,12 +8,12 @@ const SingleApp = ({singleApp}) => {
     return (
         <div className=''>
             <div className="card bg-white shadow-lg pt-5">
-                <figure>
-                    <img className='w-[200px] bg-gray-200 rounded-xl p-5' src={image} alt="app" />
+                <figure className='max-w-[250px]  bg-gray-200 rounded-xl p-5 mx-auto'>
+                    <img className='p-5' src={image} alt="app" />
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">{title}</h2>
-                    <div className="card-actions justify-between">
+                    <div className="card-actions justify-between mt-3">
                         <div className="rounded-lg bg-gray-100 px-3 py-2 text-[#00D390] flex gap-2 items-center font-bold">
                             <FiDownload />
                             {
