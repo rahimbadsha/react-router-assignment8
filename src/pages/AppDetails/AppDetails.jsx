@@ -4,18 +4,29 @@ import downloadIcon from '../../assets/icon-downloads.png'
 import reviewIcon from '../../assets/icon-review.png'
 import ratingIcon from '../../assets/icon-ratings.png'
 import RatingCharts from '../../components/RatingCharts/RatingCharts';
+import { toast } from 'react-toastify';
+import { addTOInstallDB, getInstallApp } from '../../utility/addToDB';
 
 const AppDetails = () => {
-  const { ids } = useParams();
+  const { id } = useParams();
   const appDetails = useLoaderData();
-  const findAppId = appDetails.find(app => app.id === parseInt(ids));
-  const [appInstalled, setAppInstalled] = useState(false);
-  const {title, image, description, id, companyName, downloads, ratingAvg, reviews, size, ratings} = findAppId;
+  const findAppId = appDetails.find(app => app.id === parseInt(id));
+  const [isInstalled, setIsInstalled] = useState(false);
+  const {title, image, description, companyName, downloads, ratingAvg, reviews, size, ratings} = findAppId;
   //console.log(ratings)
 
+  const handInstalledBtn = () => {
 
-  const handInstalledBtn = (id) => {
-
+        const currentInstalled = getInstallApp(); 
+        //const updatedInstallIds = currentInstalled.filter(appId => appId !== id);
+        if(currentInstalled.find(appId => appId === parseInt(id))) {
+            toast.success(`${title} Can't Install Same App`)
+            return;
+        }
+    
+        addTOInstallDB(findAppId.id)
+        setIsInstalled(true)
+        toast.success(`${title} Installed successfully!`)
   }
 
   return (
@@ -66,7 +77,13 @@ const AppDetails = () => {
                     </div>
                 </div>
 
-                <button onClick={() => handInstalledBtn(id)} className='btn bg-[#00d390] text-white font-medium mt-5'>Install Now ({size} MB)</button>
+                <button
+                onClick={() => handInstalledBtn()}
+                    className={`btn font-medium mt-5 ${isInstalled ? 'bg-gray-400 text-gray-200 cursor-not-allowed' : 'bg-[#00d390] text-white'}`}
+                    disabled={isInstalled}
+                    >
+                    {isInstalled ? 'Installed' : `Install Now (${size} MB)`}
+                </button>
                     
             </div>
             

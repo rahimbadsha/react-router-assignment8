@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 
 const AppsNotFound = () => {
     return (
-        <div className='mx-auto max-w-[1600px] flex flex-col justify-center items-center gap-5'>
+        <div className='mx-auto max-w-[1600px] flex flex-col justify-center items-center gap-5 '>
             <img src={appError} alt='' />
             <h2>OPPS! APP NOT FOUND</h2>
             <p>The App you are requesting is not found on our system.  please try another apps</p>

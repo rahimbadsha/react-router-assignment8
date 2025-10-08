@@ -5,7 +5,7 @@ const RatingCharts = ({ ratings }) => {
   
     const barColor = "#FF8000"; 
     const chartBgColor = "#F4F4F4";
-    ratings = ratings.reverse();
+    const reversRatings = [...ratings].reverse();
     //console.log(ratings)
 
   return (
@@ -14,7 +14,7 @@ const RatingCharts = ({ ratings }) => {
 
       <ResponsiveContainer width="100%" height={250}>
         <BarChart
-          data={ratings}
+          data={reversRatings}
           layout="vertical" // Horizontal bars
           margin={{ top: 10, right: 30, left: 20, bottom: 5 }}
         >
