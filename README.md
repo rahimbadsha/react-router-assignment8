@@ -1,16 +1,35 @@
-# React + Vite
+# Productive Apps
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Description  
+# AppStore Clone
 
-Currently, two official plugins are available:
+###  Description  
+**Productive App** is a modern web application that lets users explore, install, and manage productivity apps in one place.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Users can view app details, install apps to their local collection, sort them by downloads, and uninstall when needed. all with a smooth and responsive interface.
 
-## React Compiler
+---
+### Technologies Used  
+#### Frontend  
+- **React.js (Vite)**  
+- **React Router DOM**  
+- **Tailwind CSS**  
+- **DaisyUI**  
+- **Recharts**  
+- **React Toastify**  
+- **React Icons**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+#### Data Storage  
+- **Browser LocalStorage** 
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+###  Getting Started  
+#### Clone the repository 
+```bash
+git clone https://github.com/rahimbadsha/react-router-assignment8.git 
+
+
+### Author
+
+Md Rahim Badsha
+#### Frontend Developer | LinkedIn: https://www.linkedin.com/in/abdrahimbd/ 

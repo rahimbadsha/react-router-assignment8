@@ -1,8 +1,8 @@
 import React from 'react';
 import Banner from '../../components/Banner/Banner';
-import HomeState from '../../../public/boipoka/src/compoinents/HomeState/HomeState';
 import TrendingApps from '../TrendingApps/TrendingApps';
 import { useLoaderData } from 'react-router';
+import HomeState from '../HomeState/HomeState';
 
 const Home = () => {
     const appsData = useLoaderData();

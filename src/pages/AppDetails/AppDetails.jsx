@@ -30,8 +30,9 @@ const AppDetails = () => {
   }
 
   return (
-    <div className="max-w-[1600px] mx-auto md:p-15 p-5 bg-gray-200">
-        <div className='block md:flex gap-10'>
+    <div className="w-full mx-auto md:p-15 p-5 bg-gray-200">
+        <div className='max-w-[1600px] mx-auto'>
+            <div className='block md:flex gap-10'>
             <div className='bg-white shadow-lg max-w-[200px] p-5 flex items-center justify-center'>
                 <img className="w-[190px] mx-auto mb-4"src={image}  />
             </div>
@@ -88,15 +89,16 @@ const AppDetails = () => {
             </div>
             
         </div>
-        <div className="divider"></div>
+        <div className="divider py-5"></div>
         <div>
             
             <RatingCharts ratings={ratings}></RatingCharts>
         </div>
 
         <div>
-            <h3 className='font-bold'>Description</h3>
+            <h3 className='font-bold pt-8'>Description</h3>
             <p className='pt-5 text-gray-500'>{description}</p>
+        </div>
         </div>
         
       

@@ -19,7 +19,7 @@ const MyInstalledApps = ({ app, setMyInstalledApp }) => {
     };
 
     return (
-        <div className="card bg-white shadow-lg p-5 mt-4 flex flex-row justify-between items-center">
+        <div className="card bg-white shadow-lg p-5 mt-4 block sm:flex sm:flex-row sm:justify-between sm:items-center">
             <div className="flex items-center gap-4">
                 <figure className="w-[100px] bg-gray-200 rounded-xl p-3 flex justify-center items-center">
                     <img className="p-1" src={image} alt="app" />
@@ -42,7 +42,7 @@ const MyInstalledApps = ({ app, setMyInstalledApp }) => {
                 </div>
             </div>
 
-            <div className="mt-3 md:mt-0 md:ml-4 flex-shrink-0">
+            <div className="mt-3 md:mt-0 md:ml-4 mx-auto flex flex-col">
                 <button onClick={handleUninstallBtn} className="btn bg-[#00d390] text-white font-bold">
                     Uninstall
                 </button>

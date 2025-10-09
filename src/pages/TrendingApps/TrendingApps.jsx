@@ -6,12 +6,12 @@ const TrendingApps = ({appsData}) => {
     const allAppsData = appsData;
     const trendingApps = allAppsData.slice(0,8);
     return (
-        <div className='flex flex-col bg-gray-100'>
-            <div className='flex justify-center items-center flex-col mb-15 mt-15'>
+        <div className='flex flex-col bg-gray-100 w-full mx-auto px-5'>
+            <div className='flex justify-center items-center flex-col mb-15 mt-15 '>
                 <h2 className='lg:text-5xl md:text-3xl text-2xl font-bold'>Trending Apps</h2>
                 <p className='text-xl mt-3 text-gray-600'>Explore All Trending Apps on the Market developed by us</p>
             </div>
-            <div className='grid md:grid-cols-4 grid-cols-1 gap-10 auto-rows-fr'>
+            <div className='grid md:grid-cols-4 grid-cols-1 gap-6 auto-rows-fr max-w-[1450px] mx-auto' >
                 {
                  trendingApps.map(singleApp => <SingleApp key={singleApp.id} singleApp={singleApp} ></SingleApp>)
                 }
