@@ -6,15 +6,17 @@ import ratingIcon from '../../assets/icon-ratings.png'
 import RatingCharts from '../../components/RatingCharts/RatingCharts';
 import { toast } from 'react-toastify';
 import { addTOInstallDB, getInstallApp } from '../../utility/addToDB';
+import NotFoundPage from '../NotFoundPage/NotFoundPage';
 
 const AppDetails = () => {
   const { id } = useParams();
-  console.log(id)
+  //console.log(id)
   const appDetails = useLoaderData();
   const findAppId = appDetails.find(app => String(app.id) === id);
   const [isInstalled, setIsInstalled] = useState(false);
 
-  if(!findAppId) return <p>Not Found</p>
+  if(!findAppId) return <NotFoundPage></NotFoundPage>
+
   const {title, image, description, companyName, downloads, ratingAvg, reviews, size, ratings} = findAppId;
   //console.log(ratings)
 
@@ -23,7 +25,7 @@ const AppDetails = () => {
         const currentInstalled = getInstallApp(); 
         //const updatedInstallIds = currentInstalled.filter(appId => appId !== id);
         if(currentInstalled.find(appId => appId === parseInt(id))) {
-            toast.success(`${title} Can't Install Same App`)
+            toast.error(`${title} Can't Install Same App`)
             return;
         }
     
