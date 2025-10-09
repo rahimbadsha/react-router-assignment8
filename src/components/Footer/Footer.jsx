@@ -9,8 +9,8 @@ import { FaTwitterSquare } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <div className='bg-[#001931] py-10 px-5'>
-            <footer className="text-white flex justify-between items-center">
+        <div className='bg-[#001931] py-10 px-5 w-full  '>
+            <footer className="text-white flex justify-between items-center max-w-[1450px] mx-auto">
                 <aside className="flex justify-center items-center">
                     <img className='w-[60px]' src={footerImg} />
                     <h3>Hero.io</h3>
@@ -26,7 +26,7 @@ const Footer = () => {
                     
                 </div>
             </footer>
-            {/* <div className="divider"></div> */}
+            <div className="divider"></div>
             <div className='pt-4'>
                 <p className='text-white text-center'>Copyright © {new Date().getFullYear()} - All right reserved</p>
             </div>

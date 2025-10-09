@@ -9,9 +9,12 @@ import { addTOInstallDB, getInstallApp } from '../../utility/addToDB';
 
 const AppDetails = () => {
   const { id } = useParams();
+  console.log(id)
   const appDetails = useLoaderData();
-  const findAppId = appDetails.find(app => app.id === parseInt(id));
+  const findAppId = appDetails.find(app => String(app.id) === id);
   const [isInstalled, setIsInstalled] = useState(false);
+
+  if(!findAppId) return <p>Not Found</p>
   const {title, image, description, companyName, downloads, ratingAvg, reviews, size, ratings} = findAppId;
   //console.log(ratings)
 

@@ -42,7 +42,7 @@ const MyInstalledApps = ({ app, setMyInstalledApp }) => {
                 </div>
             </div>
 
-            <div className="mt-3 md:mt-0 md:ml-4 mx-auto flex flex-col">
+            <div className="mt-3 md:mt-0 md:ml-4  flex flex-col">
                 <button onClick={handleUninstallBtn} className="btn bg-[#00d390] text-white font-bold">
                     Uninstall
                 </button>
